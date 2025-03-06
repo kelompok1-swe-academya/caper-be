@@ -16,7 +16,7 @@ import (
     "github.com/gin-gonic/gin"
     "gorm.io/gorm"
 
-    "github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
+    "github.com/kelompok1-swe-academya/caper-be/pkg/log"
 )
 ```
 - For functions with more than 3 parameters, parameters should expand vertically rather than horizontally.

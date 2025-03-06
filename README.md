@@ -1,10 +1,10 @@
-# Hackathon Fiber Starter
+# Caper BE
 
 ![Go Version](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat&logo=go)
 
 ## Description
 
-This project presents a boilerplate/starter kit for rapidly developing RESTful APIs using Go, Fiber, and PostgreSQL.
+This is a backend application for Caper project. It is designed following the best practices and recommendations to ensure a clean, maintainable, and scalable codebase. It is also built with security in mind to protect against common security threats.
 
 The application is built on [Go v1.23.4](https://tip.golang.org/doc/go1.22) and [PostgreSQL](https://www.postgresql.org/). It uses [Fiber](https://docs.gofiber.io/) as the HTTP framework and [pgx](https://github.com/jackc/pgx) as the driver and [sqlx](github.com/jmoiron/sqlx) as the query builder. It also utilizes [Redis](https://redis.io/) as the caching layer with [go-redis](https://github.com/redis/go-redis/) as the client.
 
@@ -38,9 +38,9 @@ The application is built on [Go v1.23.4](https://tip.golang.org/doc/go1.22) and 
 
 ## Documentation
 
-For database schema documentation, see [here](https://dbdocs.io/ahargunyllib/hackathon-fiber-starter), powered by [dbdocs.io](https://dbdocs.io/).
+For database schema documentation, see [here](https://dbdocs.io/ahargunyllib/caper), powered by [dbdocs.io](https://dbdocs.io/).
 
-For API documentation, see [here](n1nxox08nh.apidog.io), powered by [Apidog](https://apidog.com/).
+For API documentation, see [here](), powered by [Apidog](https://apidog.com/).
 
 ## Features
 
@@ -62,10 +62,6 @@ For API documentation, see [here](n1nxox08nh.apidog.io), powered by [Apidog](htt
 
 Please review and adhere to the conventions outlined [CONVENTION](./CONVENTION.md)
 
-## Contributing
-
-Developers interested in contributing can refer to the [CONTRIBUTING](CONTRIBUTING.md) file for detailed guidelines and instructions on how to contribute.
-
 ## Inspirations
 
 - [hagopj13/node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate)
@@ -76,7 +72,3 @@ Developers interested in contributing can refer to the [CONTRIBUTING](CONTRIBUTI
 - [kmdavidds/abdimasa-backend](https://github.com/kmdavidds/abdimasa-backend)
 - [nathakusuma/sea-salon-be](https://github.com/nathakusuma/sea-salon-be)
 - [bagashiz/go-pos](https://github.com/bagashiz/go-pos)
-
-## License
-
-[MIT](LICENSE)

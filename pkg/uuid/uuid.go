@@ -1,7 +1,7 @@
 package uuid
 
 import (
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/log"
 	"github.com/google/uuid"
 )
 

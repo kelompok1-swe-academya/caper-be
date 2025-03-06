@@ -3,7 +3,7 @@ package jwt
 import (
 	"time"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/internal/infra/env"
+	"github.com/kelompok1-swe-academya/caper-be/internal/infra/env"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 )

@@ -1,7 +1,7 @@
 package response
 
 import (
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
 	"github.com/gofiber/fiber/v2"
 )
 

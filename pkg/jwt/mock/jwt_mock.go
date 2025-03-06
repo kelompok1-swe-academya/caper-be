@@ -12,7 +12,7 @@ package mock
 import (
 	reflect "reflect"
 
-	jwt "github.com/ahargunyllib/hackathon-fiber-starter/pkg/jwt"
+	jwt "github.com/kelompok1-swe-academya/caper-be/pkg/jwt"
 	uuid "github.com/google/uuid"
 	gomock "go.uber.org/mock/gomock"
 )

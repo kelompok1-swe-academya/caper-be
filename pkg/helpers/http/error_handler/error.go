@@ -3,9 +3,9 @@ package errorhandler
 import (
 	"errors"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/helpers/http/response"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/validator"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/helpers/http/response"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/validator"
 	"github.com/gofiber/fiber/v2"
 )
 

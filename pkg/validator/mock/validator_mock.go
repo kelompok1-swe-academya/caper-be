@@ -12,7 +12,7 @@ package mock
 import (
 	reflect "reflect"
 
-	validator "github.com/ahargunyllib/hackathon-fiber-starter/pkg/validator"
+	validator "github.com/kelompok1-swe-academya/caper-be/pkg/validator"
 	gomock "go.uber.org/mock/gomock"
 )
 

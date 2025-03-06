@@ -1,25 +1,22 @@
 package server
 
 import (
-	authCtr "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/auth/controller"
-	authRepo "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/auth/repository"
-	authSvc "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/auth/service"
-	userCtr "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/user/controller"
-	userRepo "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/user/repository"
-	userSvc "github.com/ahargunyllib/hackathon-fiber-starter/internal/app/user/service"
-	"github.com/ahargunyllib/hackathon-fiber-starter/internal/infra/env"
-	"github.com/ahargunyllib/hackathon-fiber-starter/internal/middlewares"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/bcrypt"
-	errorhandler "github.com/ahargunyllib/hackathon-fiber-starter/pkg/helpers/http/error_handler"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/helpers/http/response"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/jwt"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
-	timePkg "github.com/ahargunyllib/hackathon-fiber-starter/pkg/time"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/uuid"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/validator"
 	"github.com/bytedance/sonic"
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
+	userCtr "github.com/kelompok1-swe-academya/caper-be/internal/app/user/controller"
+	userRepo "github.com/kelompok1-swe-academya/caper-be/internal/app/user/repository"
+	userSvc "github.com/kelompok1-swe-academya/caper-be/internal/app/user/service"
+	"github.com/kelompok1-swe-academya/caper-be/internal/infra/env"
+	"github.com/kelompok1-swe-academya/caper-be/internal/middlewares"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/bcrypt"
+	errorhandler "github.com/kelompok1-swe-academya/caper-be/pkg/helpers/http/error_handler"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/helpers/http/response"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/jwt"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/log"
+	timePkg "github.com/kelompok1-swe-academya/caper-be/pkg/time"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/uuid"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/validator"
 )
 
 type HttpServer interface {
@@ -100,13 +97,10 @@ func (s *httpServer) MountRoutes(db *sqlx.DB) {
 	})
 
 	userRepository := userRepo.NewUserRepository(db)
-	authRepository := authRepo.NewAuthRepository(db)
 
 	userService := userSvc.NewUserService(userRepository, validator, uuid, bcrypt)
-	authService := authSvc.NewAuthService(authRepository, validator, uuid, jwt, bcrypt)
 
 	userCtr.InitNewController(v1, userService)
-	authCtr.InitAuthController(v1, authService)
 
 	s.app.Use(func(c *fiber.Ctx) error {
 		return c.SendFile("./web/not-found.html")

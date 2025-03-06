@@ -7,8 +7,8 @@ import (
 	// pgx driver for postgres
 	_ "github.com/jackc/pgx/v5/stdlib"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/internal/infra/env"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
+	"github.com/kelompok1-swe-academya/caper-be/internal/infra/env"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/log"
 	"github.com/jmoiron/sqlx"
 )
 

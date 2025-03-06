@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/entity"
+	"github.com/kelompok1-swe-academya/caper-be/domain/entity"
 	"github.com/google/uuid"
 )
 

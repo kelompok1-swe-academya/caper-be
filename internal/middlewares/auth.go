@@ -4,10 +4,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/enums"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/jwt"
 	"github.com/gofiber/fiber/v2"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/jwt"
 )
 
 func (m *Middleware) RequireAuth() fiber.Handler {
@@ -50,26 +49,5 @@ func (m *Middleware) RequireAuth() fiber.Handler {
 		ctx.Locals("claims", claims)
 
 		return ctx.Next()
-	}
-}
-
-func (m *Middleware) RequireOneOfRoles(roles ...enums.RoleEnum) fiber.Handler {
-	return func(ctx *fiber.Ctx) error {
-		claims, ok := ctx.Locals("claims").(jwt.Claims)
-		if !ok {
-			return domain.ErrInvalidBearerToken
-		}
-
-		if claims.RoleName == enums.SuperAdmin.String() {
-			return ctx.Next()
-		}
-
-		for _, role := range roles {
-			if claims.RoleName == role.String() {
-				return ctx.Next()
-			}
-		}
-
-		return domain.ErrRoleCantAccessResource
 	}
 }

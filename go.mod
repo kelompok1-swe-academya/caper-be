@@ -1,4 +1,4 @@
-module github.com/ahargunyllib/hackathon-fiber-starter
+module github.com/kelompok1-swe-academya/caper-be
 
 go 1.23.4
 

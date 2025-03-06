@@ -1,6 +1,6 @@
 package middlewares
 
-import "github.com/ahargunyllib/hackathon-fiber-starter/pkg/jwt"
+import "github.com/kelompok1-swe-academya/caper-be/pkg/jwt"
 
 type Middleware struct {
 	jwt jwt.JwtInterface

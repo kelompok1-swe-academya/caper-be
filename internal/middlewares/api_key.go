@@ -3,8 +3,8 @@ package middlewares
 import (
 	"strings"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
-	"github.com/ahargunyllib/hackathon-fiber-starter/internal/infra/env"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
+	"github.com/kelompok1-swe-academya/caper-be/internal/infra/env"
 	"github.com/gofiber/fiber/v2"
 )
 

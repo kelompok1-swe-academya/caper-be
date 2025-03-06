@@ -9,8 +9,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/log"
 )
 
 func Contains(search string, words []string) bool {

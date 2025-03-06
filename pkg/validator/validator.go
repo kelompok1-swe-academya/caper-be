@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/log"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/log"
 	"github.com/bytedance/sonic"
 	"github.com/go-playground/locales/en"
 	ut "github.com/go-playground/universal-translator"

@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/contracts"
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/dto"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/helpers/http/response"
+	"github.com/kelompok1-swe-academya/caper-be/domain/contracts"
+	"github.com/kelompok1-swe-academya/caper-be/domain/dto"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/helpers/http/response"
 	"github.com/gofiber/fiber/v2"
 )
 

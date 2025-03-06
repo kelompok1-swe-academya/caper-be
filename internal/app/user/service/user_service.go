@@ -5,13 +5,13 @@ import (
 	"database/sql"
 	"errors"
 
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain"
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/contracts"
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/dto"
-	"github.com/ahargunyllib/hackathon-fiber-starter/domain/entity"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/bcrypt"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/uuid"
-	"github.com/ahargunyllib/hackathon-fiber-starter/pkg/validator"
+	"github.com/kelompok1-swe-academya/caper-be/domain"
+	"github.com/kelompok1-swe-academya/caper-be/domain/contracts"
+	"github.com/kelompok1-swe-academya/caper-be/domain/dto"
+	"github.com/kelompok1-swe-academya/caper-be/domain/entity"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/bcrypt"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/uuid"
+	"github.com/kelompok1-swe-academya/caper-be/pkg/validator"
 )
 
 type userService struct {
