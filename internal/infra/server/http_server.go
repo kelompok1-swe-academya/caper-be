@@ -4,9 +4,6 @@ import (
 	"github.com/bytedance/sonic"
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
-	userCtr "github.com/kelompok1-swe-academya/caper-be/internal/app/user/controller"
-	userRepo "github.com/kelompok1-swe-academya/caper-be/internal/app/user/repository"
-	userSvc "github.com/kelompok1-swe-academya/caper-be/internal/app/user/service"
 	"github.com/kelompok1-swe-academya/caper-be/internal/infra/env"
 	"github.com/kelompok1-swe-academya/caper-be/internal/middlewares"
 	"github.com/kelompok1-swe-academya/caper-be/pkg/bcrypt"
@@ -77,30 +74,24 @@ func (s *httpServer) MountMiddlewares() {
 }
 
 func (s *httpServer) MountRoutes(db *sqlx.DB) {
-	bcrypt := bcrypt.Bcrypt
+	_ = bcrypt.Bcrypt
 	_ = timePkg.Time
-	uuid := uuid.UUID
-	validator := validator.Validator
+	_ = uuid.UUID
+	_ = validator.Validator
 	jwt := jwt.Jwt
 
 	_ = middlewares.NewMiddleware(jwt)
 
 	s.app.Get("/", func(c *fiber.Ctx) error {
-		return response.SendResponse(c, fiber.StatusOK, "hai manies😘")
+		return response.SendResponse(c, fiber.StatusOK, "caper be is running")
 	})
 
 	api := s.app.Group("/api")
 	v1 := api.Group("/v1")
 
 	v1.Get("/", func(c *fiber.Ctx) error {
-		return response.SendResponse(c, fiber.StatusOK, "hai manies😘")
+		return response.SendResponse(c, fiber.StatusOK, "caper be is running")
 	})
-
-	userRepository := userRepo.NewUserRepository(db)
-
-	userService := userSvc.NewUserService(userRepository, validator, uuid, bcrypt)
-
-	userCtr.InitNewController(v1, userService)
 
 	s.app.Use(func(c *fiber.Ctx) error {
 		return c.SendFile("./web/not-found.html")
